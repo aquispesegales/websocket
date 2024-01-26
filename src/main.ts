@@ -2,9 +2,10 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import * as fs  from 'fs';
 const httpsOptions = {
-  key: fs.readFileSync('./secrets/cert.key'),
-  cert: fs.readFileSync('./secrets/cert.crt'),
+  key: fs.readFileSync('/etc/ssl-exacta/private.key'),
+  cert: fs.readFileSync('/etc/ssl-exacta/certificate.crt'),
 };
+
 async function bootstrap() {
 
  
