@@ -8,8 +8,10 @@ export class PagoQrController {
     NotificaPagoQr(@Param('alias') alias: string) {
 
         const socket = io("wss://localhost:9082");
+        console.log("conectandooo");
         socket.on('connect',()=>{
             socket.emit("confirmaPagoQr", alias);
+            console.log("conectado");
         })
 
     }
