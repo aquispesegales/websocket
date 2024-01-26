@@ -13,6 +13,11 @@ export class PagoQrController {
             socket.emit("confirmaPagoQr", alias);
             console.log("conectado");
         })
+        socket.on('error', function(exception) {
+            console.log('SOCKET ERROR');
+            console.log(exception);
+            
+          })
 
     }
 }
