@@ -13,6 +13,6 @@ async function bootstrap() {
   });
   //const app = await NestFactory.create(AppModule);
   app.enableCors();
-  await app.listen(9082);
+  await app.listen(9083);
 }
 bootstrap();
