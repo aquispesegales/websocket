@@ -29,8 +29,8 @@ export class WebsocketGateway implements OnGatewayConnection, OnGatewayDisconnec
     @SubscribeMessage('confirmaPagoQr')
     handleMessage( @ConnectedSocket() client:Socket, @MessageBody()  data:any){
         console.log(data);
-        //this.server.emit('mensajeServer',data)
-        client.broadcast.emit('confirmaPagoQr',data)
+        this.server.emit('confirmaPagoQr',data)
+        //client.broadcast.emit('confirmaPagoQr',data)
 
     }
 
