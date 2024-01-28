@@ -11,8 +11,8 @@ import {
 import { Server,Socket } from "socket.io";
 
 
-@WebSocketGateway()
-//@WebSocketGateway(9083,{ cors: true })
+//@WebSocketGateway()
+@WebSocketGateway({ cors: true })
 export class WebsocketGateway implements OnGatewayConnection, OnGatewayDisconnect, OnGatewayInit {
     afterInit(client: Socket) {
         console.log("Socket iniciado");

@@ -12,6 +12,7 @@ async function bootstrap() {
     httpsOptions,
   });
   //const app = await NestFactory.create(AppModule);
+
   app.enableCors();
   await app.listen(9083);
 }
