@@ -4,8 +4,8 @@ import * as fs  from 'fs';
 
 async function bootstrap() {
   const httpsOptions = {
-    key: fs.readFileSync('./secrets/private.key'),
-    cert: fs.readFileSync('./secrets/certificate.crt'),
+    key: fs.readFileSync('/home/quickpay/public_html/PRD/SSL/quickpay_com_bo.key'),
+    cert: fs.readFileSync('/home/quickpay/public_html/PRD/SSL/quickpay_com_bo.crt'),
   };
   const app = await NestFactory.create(AppModule, {
     httpsOptions,
